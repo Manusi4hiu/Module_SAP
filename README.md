@@ -1,28 +1,19 @@
 # SAP Module Simulator
 
-![Status](https://img.shields.io/badge/status-MVP-green)
+![Status](https://img.shields.io/badge/status-Complete-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-Desktop application untuk simulasi SAP GUI dengan modul lengkap. Dibangun untuk learning & practice SAP workflows.
+Desktop application untuk simulasi SAP GUI dengan 8 modul lengkap (14 T-codes). Dibangun untuk learning & practice SAP workflows.
 
 ## 📦 Features
 
-### ✅ Implemented
-- **SAP GUI Shell**: T-code navigation, menu bar, status bar
-- **MM01**: Material Master CRUD dengan validasi
-- **ME21N**: Purchase Order creation dengan items
+- **SAP GUI Shell**: T-code navigation, menu bar, status bar, F3 back
+- **14 T-codes**: MM (5), HCM (2), SD (2), FI (1), CO (1), PP (1), PM (1), EWM (1)
 - **Master Data**: 36 materials, 10 vendors, 10 employees (imported dari Excel)
-
-### 🚧 Roadmap
-- [ ] MM03 - Display Material
-- [ ] ME23N - Display Purchase Order
-- [ ] MIGO - Goods Receipt
-- [ ] PA30 - HR Master Data maintenance
-- [ ] PA20 - Display HR Master
-- [ ] FB01 - FI Document posting
-- [ ] VA01 - Sales Order creation
-- [ ] CO, PP, PM, EWM modules
+- **SAP-style Validation**: Error codes (ME 022, F5 001, etc.), balance checks
+- **CRUD Operations**: Create, display, edit across all modules
+- **Cross-platform**: Linux + Windows 10/11
 
 ## 🚀 Quick Start
 
@@ -100,14 +91,14 @@ user_progress (module, tcode, completed, score)
 
 | Module | Code | Status | T-codes |
 |--------|------|--------|---------|
-| Materials Management | MM | 🟢 Active | MM01 ✅, ME21N ✅ |
-| Human Capital | HCM | 🟡 Planned | PA30, PA20 |
-| Finance | FI | 🟡 Planned | FB01 |
-| Sales & Distribution | SD | 🟡 Planned | VA01 |
-| Controlling | CO | ⚪ Future | - |
-| Production Planning | PP | ⚪ Future | - |
-| Plant Maintenance | PM | ⚪ Future | - |
-| Extended Warehouse | EWM | ⚪ Future | - |
+| Materials Management | MM | ✅ Complete | MM01, MM03, ME21N, ME23N, MIGO |
+| Human Capital | HCM | ✅ Complete | PA30, PA20 |
+| Sales & Distribution | SD | ✅ Complete | VA01, VA03 |
+| Finance | FI | ✅ Complete | FB01 |
+| Controlling | CO | ✅ Complete | KS01 |
+| Production Planning | PP | ✅ Complete | MD61 |
+| Plant Maintenance | PM | ✅ Complete | IW31 |
+| Extended Warehouse | EWM | ✅ Complete | LT01 |
 
 ## 🧪 Testing
 
@@ -146,4 +137,4 @@ MIT License - free for learning & personal use
 
 **Author**: Dimas Rifky Pratama  
 **Purpose**: Learning SAP workflows untuk IT Support role preparation  
-**Status**: MVP - 2 working T-codes, 8 modules planned
+**Status**: Complete - 14 T-codes, 8 modules (100%)
