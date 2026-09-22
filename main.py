@@ -88,6 +88,30 @@ class SAPSimulator(QMainWindow):
         hcm_menu = menubar.addMenu("HCM - Human Capital")
         self.add_tcode_actions(hcm_menu, 'HCM')
         
+        # SD Module menu
+        sd_menu = menubar.addMenu("SD - Sales & Distribution")
+        self.add_tcode_actions(sd_menu, 'SD')
+        
+        # FI Module menu
+        fi_menu = menubar.addMenu("FI - Finance")
+        self.add_tcode_actions(fi_menu, 'FI')
+        
+        # CO Module menu
+        co_menu = menubar.addMenu("CO - Controlling")
+        self.add_tcode_actions(co_menu, 'CO')
+        
+        # PP Module menu
+        pp_menu = menubar.addMenu("PP - Production Planning")
+        self.add_tcode_actions(pp_menu, 'PP')
+        
+        # PM Module menu
+        pm_menu = menubar.addMenu("PM - Plant Maintenance")
+        self.add_tcode_actions(pm_menu, 'PM')
+        
+        # EWM Module menu
+        ewm_menu = menubar.addMenu("EWM - Extended Warehouse")
+        self.add_tcode_actions(ewm_menu, 'EWM')
+        
         # Help menu
         help_menu = menubar.addMenu("Help")
         about_action = QAction("About", self)
