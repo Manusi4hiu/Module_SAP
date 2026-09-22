@@ -24,9 +24,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      - run: sudo apt-get update && sudo -S -p '' apt-get install -y wget
-      - run: chmod +x build_appimage.sh && ./build_appimage.sh
+      - run: pip install pyinstaller PyQt5 openpyxl
+      - run: pyinstaller build_linux.spec
+      - run: chmod +x dist/SAP_Simulator
       - uses: actions/upload-artifact@v4
         with:
-          name: SAP_Simulator-x86_64.AppImage
-          path: SAP_Simulator-x86_64.AppImage
+          name: SAP_Simulator-linux
+          path: dist/SAP_Simulator
