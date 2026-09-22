@@ -113,7 +113,7 @@ class Database:
             ('MM03', 'MM', 'Display Material', 'material_display', 1),
             ('ME21N', 'MM', 'Create Purchase Order', 'po_create', 1),
             ('ME23N', 'MM', 'Display Purchase Order', 'po_display', 1),
-            ('MIGO', 'MM', 'Goods Receipt', 'goods_receipt', 0),
+            ('MIGO', 'MM', 'Goods Receipt', 'goods_receipt', 1),
             ('PA30', 'HCM', 'Maintain HR Master Data', 'personnel_master', 1),
             ('PA20', 'HCM', 'Display HR Master Data', 'personnel_display', 1),
             ('FB01', 'FI', 'Post Document', 'fi_posting', 0),

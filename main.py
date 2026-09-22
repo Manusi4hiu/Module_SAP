@@ -12,6 +12,7 @@ from screens.po_create import POCreateScreen
 from screens.po_display import PODisplayScreen
 from screens.so_create import SOCreateScreen
 from screens.so_display import SODisplayScreen
+from screens.goods_receipt import GoodsReceiptScreen
 from screens.master_data import MaterialMasterScreen
 from screens.hcm_master import EmployeeMasterScreen
 
@@ -148,6 +149,10 @@ class SAPSimulator(QMainWindow):
             self.stack.setCurrentWidget(screen)
         elif tcode == 'ME23N':
             screen = PODisplayScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'MIGO':
+            screen = GoodsReceiptScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         elif tcode == 'MM01':
