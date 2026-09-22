@@ -26,19 +26,27 @@ Desktop application untuk simulasi SAP GUI dengan modul lengkap. Dibangun untuk 
 
 ## 🚀 Quick Start
 
+**Linux/macOS**:
 ```bash
-# Clone repository
-git clone https://github.com/dimasrifkypratama/Module_SAP.git
+git clone https://github.com/Manusi4hiu/Module_SAP.git
 cd Module_SAP
-
-# Run (auto-setup venv & dependencies)
 ./run.sh
+```
 
-# Or manual setup
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-.venv/bin/python excel_parser.py  # Import master data
-.venv/bin/python main.py
+**Windows 10/11**:
+```cmd
+git clone https://github.com/Manusi4hiu/Module_SAP.git
+cd Module_SAP
+run.bat
+```
+
+**Manual setup** (semua OS):
+```bash
+python -m venv .venv
+# Linux/Mac: .venv/bin/pip install -r requirements.txt
+# Windows: .venv\Scripts\pip install -r requirements.txt
+python excel_parser.py
+python main.py
 ```
 
 ## 📖 Usage
