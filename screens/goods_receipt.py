@@ -198,7 +198,7 @@ class GoodsReceiptScreen(QWidget):
                     gr_items.append((gr_number, self.current_po, item_no, material_id, gr_qty))
         
         if not gr_items:
-            QMessageBox.warning(self, "Error", "No valid GR quantities entered")
+            QMessageBox.critical(self, "Error MB 045", "No goods receipt quantities\nEnter at least one GR quantity")
             return
         
         # Save to DB

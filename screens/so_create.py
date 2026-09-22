@@ -110,7 +110,7 @@ class SOCreateScreen(QWidget):
         customer = self.customer_input.text().strip()
         
         if not customer:
-            QMessageBox.warning(self, "Error", "Customer harus diisi")
+            QMessageBox.critical(self, "Error VA 020", "Customer is required\nEnter customer number")
             return
         
         # Generate SO number

@@ -113,7 +113,7 @@ class POCreateScreen(QWidget):
         vendor = self.vendor_input.text().strip()
         
         if not vendor:
-            QMessageBox.warning(self, "Error", "Vendor harus diisi")
+            QMessageBox.critical(self, "Error ME 022", "Vendor is required\nEnter vendor number")
             return
         
         # Generate PO number
@@ -140,7 +140,7 @@ class POCreateScreen(QWidget):
                 item_no += 10
         
         if not items:
-            QMessageBox.warning(self, "Error", "Tidak ada item yang valid")
+            QMessageBox.critical(self, "Error ME 023", "No valid line items\nEnter at least one item")
             return
         
         # Save to DB
