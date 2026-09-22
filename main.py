@@ -47,13 +47,45 @@ class SAPSimulator(QMainWindow):
         # Central widget - stacked widget for screens
         self.stack = QStackedWidget()
         
-        # Home screen
+        # Home screen with quick start guide
         home_widget = QWidget()
         home_layout = QVBoxLayout()
-        welcome_label = QLabel("SAP Module Simulator\n\nMasukkan T-code di toolbar atau pilih dari menu")
+        
+        welcome_label = QLabel("SAP Module Simulator")
         welcome_label.setAlignment(Qt.AlignCenter)
-        welcome_label.setFont(QFont("Arial", 14))
+        welcome_label.setFont(QFont("Arial", 16, QFont.Bold))
         home_layout.addWidget(welcome_label)
+        
+        guide_text = """Masukkan T-code di toolbar atau pilih dari menu
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK START - Sample Master Data untuk Testing
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 MATERIALS (36 items)
+   MAT1001 - Engine Oil 5W-30
+   MAT1002 - Brake Pad Front
+   MAT1003 - Air Filter
+   (lihat MM03 untuk list lengkap)
+
+🏢 VENDORS (10 items)
+   C1001 - PT Nusantara Retail (Jakarta)
+   C1002 - PT Surya Mobility (Surabaya)
+   C1003 - PT Garuda Services (Bandung)
+
+👤 EMPLOYEES (10 items)
+   100001 - Alya Putri (HR Analyst)
+   100002 - Bima Pratama (Finance Analyst)
+   100003 - Citra Lestari (Sales Admin)
+
+💡 TIP: Gunakan kode-kode di atas untuk testing create/display"""
+        
+        guide_label = QLabel(guide_text)
+        guide_label.setAlignment(Qt.AlignLeft)
+        guide_label.setFont(QFont("Courier", 10))
+        guide_label.setWordWrap(True)
+        home_layout.addWidget(guide_label)
+        
         home_widget.setLayout(home_layout)
         
         self.stack.addWidget(home_widget)
