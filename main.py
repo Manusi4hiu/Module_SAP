@@ -16,6 +16,7 @@ from screens.goods_receipt import GoodsReceiptScreen
 from screens.fi_posting import FIPostingScreen
 from screens.co_cost_center import CostCenterScreen
 from screens.pp_planned_order import PlannedOrderScreen
+from screens.pm_work_order import WorkOrderScreen
 from screens.master_data import MaterialMasterScreen
 from screens.hcm_master import EmployeeMasterScreen
 
@@ -192,6 +193,10 @@ class SAPSimulator(QMainWindow):
             self.stack.setCurrentWidget(screen)
         elif tcode == 'MD61':
             screen = PlannedOrderScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'IW31':
+            screen = WorkOrderScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         

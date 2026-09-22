@@ -30,8 +30,11 @@
 ### PP - Production Planning (1/1 ✓)
 - ✅ **MD61** - Create Planned Order (NEW)
 
-### PM - Plant Maintenance (0/1)
-- ⬜ **IW31** - Create Work Order
+### PM - Plant Maintenance (1/1 ✓)
+- ✅ **IW31** - Create Work Order (NEW)
+
+### EWM - Extended Warehouse (0/1)
+- ⬜ **LT01** - Create Transfer Order
 
 ---
 
@@ -84,12 +87,12 @@ git log --oneline     # Commit history
 | FI | 100% (1/1) | ✓ Complete |
 | CO | 100% (1/1) | ✓ Complete |
 | PP | 100% (1/1) | ✓ Complete |
-| PM | 0% | All |
+| PM | 100% (1/1) | ✓ Complete |
 | EWM | 0% | All |
 
-**Total**: 12/40+ T-codes  
-**Complete modules**: 6/8 (MM, HCM, SD, FI, CO, PP)  
-**Completion**: 75% of core modules
+**Total**: 13/40+ T-codes  
+**Complete modules**: 7/8 (87.5%)  
+**Final module**: EWM remaining
 
 ---
 
