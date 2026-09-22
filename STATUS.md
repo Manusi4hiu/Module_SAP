@@ -27,8 +27,11 @@
 ### CO - Controlling (1/1 ✓)
 - ✅ **KS01** - Cost Center Management (NEW)
 
-### PP - Production Planning (0/1)
-- ⬜ **MD61** - Create Planned Order
+### PP - Production Planning (1/1 ✓)
+- ✅ **MD61** - Create Planned Order (NEW)
+
+### PM - Plant Maintenance (0/1)
+- ⬜ **IW31** - Create Work Order
 
 ---
 
@@ -80,12 +83,13 @@ git log --oneline     # Commit history
 | SD | 100% (2/2) | ✓ Complete |
 | FI | 100% (1/1) | ✓ Complete |
 | CO | 100% (1/1) | ✓ Complete |
-| PP | 0% | All |
+| PP | 100% (1/1) | ✓ Complete |
 | PM | 0% | All |
 | EWM | 0% | All |
 
-**Total**: 11/40+ T-codes  
-**Complete modules**: 5/8 (MM, HCM, SD, FI, CO)
+**Total**: 12/40+ T-codes  
+**Complete modules**: 6/8 (MM, HCM, SD, FI, CO, PP)  
+**Completion**: 75% of core modules
 
 ---
 
