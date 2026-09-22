@@ -17,6 +17,19 @@ Desktop application untuk simulasi SAP GUI dengan 8 modul lengkap (14 T-codes). 
 
 ## 🚀 Quick Start
 
+### Option 1: Download Ready-to-Run Binary (Recommended)
+
+**Windows 10/11**:
+- Download `SAP_Simulator.exe` from [Releases](https://github.com/Manusi4hiu/Module_SAP/releases)
+- Double-click to run (no install needed)
+
+**Linux**:
+- Download `SAP_Simulator-x86_64.AppImage` from [Releases](https://github.com/Manusi4hiu/Module_SAP/releases)
+- Make executable: `chmod +x SAP_Simulator-x86_64.AppImage`
+- Run: `./SAP_Simulator-x86_64.AppImage`
+
+### Option 2: Run from Source
+
 **Linux/macOS**:
 ```bash
 git clone https://github.com/Manusi4hiu/Module_SAP.git
