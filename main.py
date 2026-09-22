@@ -14,6 +14,7 @@ from screens.so_create import SOCreateScreen
 from screens.so_display import SODisplayScreen
 from screens.goods_receipt import GoodsReceiptScreen
 from screens.fi_posting import FIPostingScreen
+from screens.co_cost_center import CostCenterScreen
 from screens.master_data import MaterialMasterScreen
 from screens.hcm_master import EmployeeMasterScreen
 
@@ -182,6 +183,10 @@ class SAPSimulator(QMainWindow):
             self.stack.setCurrentWidget(screen)
         elif tcode == 'FB01':
             screen = FIPostingScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'KS01':
+            screen = CostCenterScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         

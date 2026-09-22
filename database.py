@@ -119,6 +119,7 @@ class Database:
             ('FB01', 'FI', 'Post Document', 'fi_posting', 1),
             ('VA01', 'SD', 'Create Sales Order', 'so_create', 1),
             ('VA03', 'SD', 'Display Sales Order', 'so_display', 1),
+            ('KS01', 'CO', 'Cost Center Management', 'cost_center', 1),
         ]
         
         cur.executemany("""
