@@ -24,8 +24,11 @@
 - ✅ **VA01** - Create Sales Order
 - ✅ **VA03** - Display Sales Order
 
-### FI - Finance (1/1 ✓)
-- ✅ **FB01** - Post Document (NEW)
+### CO - Controlling (1/1 ✓)
+- ✅ **KS01** - Cost Center Management (NEW)
+
+### PP - Production Planning (0/1)
+- ⬜ **MD61** - Create Planned Order
 
 ---
 
