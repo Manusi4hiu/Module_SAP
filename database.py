@@ -120,6 +120,7 @@ class Database:
             ('VA01', 'SD', 'Create Sales Order', 'so_create', 1),
             ('VA03', 'SD', 'Display Sales Order', 'so_display', 1),
             ('KS01', 'CO', 'Cost Center Management', 'cost_center', 1),
+            ('MD61', 'PP', 'Create Planned Order', 'planned_order', 1),
         ]
         
         cur.executemany("""
