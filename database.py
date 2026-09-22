@@ -110,12 +110,12 @@ class Database:
         # Insert default T-codes
         tcodes = [
             ('MM01', 'MM', 'Create Material', 'material_master', 1),
-            ('MM03', 'MM', 'Display Material', 'material_display', 0),
+            ('MM03', 'MM', 'Display Material', 'material_display', 1),
             ('ME21N', 'MM', 'Create Purchase Order', 'po_create', 1),
             ('ME23N', 'MM', 'Display Purchase Order', 'po_display', 0),
             ('MIGO', 'MM', 'Goods Receipt', 'goods_receipt', 0),
             ('PA30', 'HCM', 'Maintain HR Master Data', 'personnel_master', 1),
-            ('PA20', 'HCM', 'Display HR Master Data', 'personnel_display', 0),
+            ('PA20', 'HCM', 'Display HR Master Data', 'personnel_display', 1),
             ('FB01', 'FI', 'Post Document', 'fi_posting', 0),
             ('VA01', 'SD', 'Create Sales Order', 'so_create', 0),
         ]

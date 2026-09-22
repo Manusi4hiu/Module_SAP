@@ -147,8 +147,16 @@ class SAPSimulator(QMainWindow):
             screen = MaterialMasterScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
+        elif tcode == 'MM03':
+            screen = MaterialMasterScreen(self.db, readonly=True)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
         elif tcode == 'PA30':
             screen = EmployeeMasterScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'PA20':
+            screen = EmployeeMasterScreen(self.db, readonly=True)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         

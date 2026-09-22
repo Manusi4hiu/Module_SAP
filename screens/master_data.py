@@ -9,31 +9,34 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
 from PyQt5.QtCore import Qt
 
 class MaterialMasterScreen(QWidget):
-    """MM01 - Material Master maintenance"""
-    def __init__(self, db):
+    """MM01/MM03 - Material Master maintenance/display"""
+    def __init__(self, db, readonly=False):
         super().__init__()
         self.db = db
+        self.readonly = readonly
         self.init_ui()
         self.load_data()
     
     def init_ui(self):
         layout = QVBoxLayout()
         
-        title = QLabel("Material Master (MM01)")
+        title_text = "Material Master (MM03 - Display)" if self.readonly else "Material Master (MM01)"
+        title = QLabel(title_text)
         title.setStyleSheet("font-size: 14pt; font-weight: bold;")
         layout.addWidget(title)
         
         # Toolbar
-        toolbar = QHBoxLayout()
-        create_btn = QPushButton("Create")
-        create_btn.clicked.connect(self.create_material)
-        toolbar.addWidget(create_btn)
-        
-        refresh_btn = QPushButton("Refresh")
-        refresh_btn.clicked.connect(self.load_data)
-        toolbar.addWidget(refresh_btn)
-        toolbar.addStretch()
-        layout.addLayout(toolbar)
+        if not self.readonly:
+            toolbar = QHBoxLayout()
+            create_btn = QPushButton("Create")
+            create_btn.clicked.connect(self.create_material)
+            toolbar.addWidget(create_btn)
+            
+            refresh_btn = QPushButton("Refresh")
+            refresh_btn.clicked.connect(self.load_data)
+            toolbar.addWidget(refresh_btn)
+            toolbar.addStretch()
+            layout.addLayout(toolbar)
         
         # Table
         self.table = QTableWidget()
@@ -66,6 +69,8 @@ class MaterialMasterScreen(QWidget):
             self.load_data()
     
     def edit_material(self):
+        if self.readonly:
+            return  # ponytail: no-op in display mode
         row = self.table.currentRow()
         if row >= 0:
             material_id = self.table.item(row, 0).text()

@@ -9,31 +9,34 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
 from PyQt5.QtCore import Qt
 
 class EmployeeMasterScreen(QWidget):
-    """PA30 - Employee Master maintenance"""
-    def __init__(self, db):
+    """PA30/PA20 - Employee Master maintenance/display"""
+    def __init__(self, db, readonly=False):
         super().__init__()
         self.db = db
+        self.readonly = readonly
         self.init_ui()
         self.load_data()
     
     def init_ui(self):
         layout = QVBoxLayout()
         
-        title = QLabel("Maintain HR Master Data (PA30)")
+        title_text = "Display HR Master Data (PA20)" if self.readonly else "Maintain HR Master Data (PA30)"
+        title = QLabel(title_text)
         title.setStyleSheet("font-size: 14pt; font-weight: bold;")
         layout.addWidget(title)
         
         # Toolbar
-        toolbar = QHBoxLayout()
-        create_btn = QPushButton("Create")
-        create_btn.clicked.connect(self.create_employee)
-        toolbar.addWidget(create_btn)
-        
-        refresh_btn = QPushButton("Refresh")
-        refresh_btn.clicked.connect(self.load_data)
-        toolbar.addWidget(refresh_btn)
-        toolbar.addStretch()
-        layout.addLayout(toolbar)
+        if not self.readonly:
+            toolbar = QHBoxLayout()
+            create_btn = QPushButton("Create")
+            create_btn.clicked.connect(self.create_employee)
+            toolbar.addWidget(create_btn)
+            
+            refresh_btn = QPushButton("Refresh")
+            refresh_btn.clicked.connect(self.load_data)
+            toolbar.addWidget(refresh_btn)
+            toolbar.addStretch()
+            layout.addLayout(toolbar)
         
         # Table
         self.table = QTableWidget()
@@ -66,6 +69,8 @@ class EmployeeMasterScreen(QWidget):
             self.load_data()
     
     def edit_employee(self):
+        if self.readonly:
+            return  # ponytail: no-op in display mode
         row = self.table.currentRow()
         if row >= 0:
             personnel_no = self.table.item(row, 0).text()
