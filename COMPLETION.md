@@ -4,8 +4,8 @@
 
 **Location**: `~/Program/Module_SAP`  
 **GitHub**: https://github.com/Manusi4hiu/Module_SAP  
-**Commits**: 8 commits, clean history  
-**LOC**: ~860 lines Python  
+**Commits**: 12 commits  
+**LOC**: ~1,000 lines Python  
 
 ---
 
@@ -13,22 +13,14 @@
 
 ### 1. **Desktop Application (PyQt5)**
 - SAP GUI-style interface dengan menu bar, toolbar, status bar
-- T-code navigation system (ketik ME21N atau MM01)
+- T-code navigation system (ketik ME21N, MM01, PA30)
 - Keyboard shortcuts (F3, F8, Ctrl+S)
 - SAP color scheme & styling
 
 ### 2. **Working Transactions**
 ✅ **MM01** - Material Master CRUD  
-- Create new materials
-- Edit existing materials  
-- View all materials dalam table
-- Full validation
-
 ✅ **ME21N** - Create Purchase Order  
-- Header: Vendor, Date, Company Code, Plant
-- Items: Material, Qty, Price (auto-calculate)
-- Save ke database dengan PO number generated
-- Success feedback dengan total value
+✅ **PA30** - HR Master Data maintenance (NEW)
 
 ### 3. **Database & Master Data**
 - SQLite database: `sap_simulator.db`
