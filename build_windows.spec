@@ -9,6 +9,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ('sap_style.qss', '.'),
+        ('sap_simulator.db', '.'),
     ],
     hiddenimports=['PyQt5.QtSql'],
     hookspath=[],
