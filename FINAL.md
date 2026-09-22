@@ -67,11 +67,22 @@ cd ~/Program/Module_SAP
 run.bat   # Windows
 ```
 
-**Try these workflows**:
-1. **Procurement**: ME21N (create PO) → MIGO (receive goods)
-2. **Sales**: VA01 (create SO) → VA03 (display)
-3. **Finance**: FB01 (post journal) dengan balance check
-4. **HR**: PA30 (create employee) → PA20 (display)
+**Integration test available** (requires display):
+```bash
+.venv/bin/python test_integration.py  # GUI test
+```
+
+**Manual test checklist**:
+- [ ] MM01 - Create material → save
+- [ ] ME21N - Create PO → save  
+- [ ] MIGO - Load PO → post GR
+- [ ] PA30 - Create employee → save
+- [ ] VA01 - Create SO → save
+- [ ] FB01 - Post journal (balanced) → save
+- [ ] KS01 - Create cost center → save
+- [ ] All display screens (MM03, ME23N, PA20, VA03)
+- [ ] F3 back navigation
+- [ ] Error messages show
 
 ---
 
