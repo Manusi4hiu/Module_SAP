@@ -13,9 +13,9 @@ jobs:
       - run: pip install pyinstaller PyQt5 openpyxl
       - run: python excel_parser.py
       - run: pyinstaller build_windows.spec
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: windows-exe
+          name: SAP_Simulator.exe
           path: dist/SAP_Simulator.exe
   linux:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
       - run: sudo apt-get update && sudo -S -p '' apt-get install -y wget
       - run: chmod +x build_appimage.sh && ./build_appimage.sh
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: linux-appimage
+          name: SAP_Simulator-x86_64.AppImage
           path: SAP_Simulator-x86_64.AppImage
