@@ -9,6 +9,7 @@ from PyQt5.QtGui import QKeySequence, QFont
 from pathlib import Path
 from database import Database
 from screens.po_create import POCreateScreen
+from screens.po_display import PODisplayScreen
 from screens.master_data import MaterialMasterScreen
 from screens.hcm_master import EmployeeMasterScreen
 
@@ -141,6 +142,10 @@ class SAPSimulator(QMainWindow):
         # Load appropriate screen
         if tcode == 'ME21N':
             screen = POCreateScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'ME23N':
+            screen = PODisplayScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         elif tcode == 'MM01':
