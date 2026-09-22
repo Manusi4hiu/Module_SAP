@@ -30,8 +30,8 @@ class ExcelParser:
         cur = conn.cursor()
         
         materials = []
-        # Row 73 onwards based on read_file output
-        for row in ws.iter_rows(min_row=73, max_row=100, values_only=True):
+        # Data starts at row 5 (row 4 is header)
+        for row in ws.iter_rows(min_row=5, max_row=200, values_only=True):
             if row[0]:  # Material ID exists
                 materials.append((
                     row[0],  # Material
@@ -75,7 +75,8 @@ class ExcelParser:
         cur = conn.cursor()
         
         vendors = []
-        for row in ws.iter_rows(min_row=59, max_row=68, values_only=True):
+        # Data starts at row 5
+        for row in ws.iter_rows(min_row=5, max_row=20, values_only=True):
             if row[0]:
                 vendors.append((
                     row[0],  # Customer/Vendor ID
@@ -113,7 +114,8 @@ class ExcelParser:
         cur = conn.cursor()
         
         employees = []
-        for row in ws.iter_rows(min_row=54, max_row=63, values_only=True):
+        # Data starts at row 5
+        for row in ws.iter_rows(min_row=5, max_row=20, values_only=True):
             if row[0]:
                 employees.append((
                     row[0],  # Personnel No
