@@ -109,7 +109,7 @@ class Database:
         
         # Insert default T-codes
         tcodes = [
-            ('MM01', 'MM', 'Create Material', 'material_master', 0),
+            ('MM01', 'MM', 'Create Material', 'material_master', 1),
             ('MM03', 'MM', 'Display Material', 'material_display', 0),
             ('ME21N', 'MM', 'Create Purchase Order', 'po_create', 1),
             ('ME23N', 'MM', 'Display Purchase Order', 'po_display', 0),
