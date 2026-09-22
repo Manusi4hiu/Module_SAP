@@ -118,6 +118,7 @@ class Database:
             ('PA20', 'HCM', 'Display HR Master Data', 'personnel_display', 1),
             ('FB01', 'FI', 'Post Document', 'fi_posting', 0),
             ('VA01', 'SD', 'Create Sales Order', 'so_create', 1),
+            ('VA03', 'SD', 'Display Sales Order', 'so_display', 1),
         ]
         
         cur.executemany("""

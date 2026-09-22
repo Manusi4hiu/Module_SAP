@@ -11,6 +11,7 @@ from database import Database
 from screens.po_create import POCreateScreen
 from screens.po_display import PODisplayScreen
 from screens.so_create import SOCreateScreen
+from screens.so_display import SODisplayScreen
 from screens.master_data import MaterialMasterScreen
 from screens.hcm_master import EmployeeMasterScreen
 
@@ -167,6 +168,10 @@ class SAPSimulator(QMainWindow):
             self.stack.setCurrentWidget(screen)
         elif tcode == 'VA01':
             screen = SOCreateScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'VA03':
+            screen = SODisplayScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         
