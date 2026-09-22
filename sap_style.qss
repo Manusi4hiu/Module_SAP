@@ -1,0 +1,93 @@
+/* SAP GUI-inspired stylesheet */
+
+QMainWindow {
+    background-color: #E8E8E8;
+}
+
+QMenuBar {
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #A0A0A0;
+    padding: 2px;
+}
+
+QMenuBar::item {
+    padding: 4px 12px;
+    background-color: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #D0D0D0;
+}
+
+QToolBar {
+    background-color: #F0F0F0;
+    border: 1px solid #A0A0A0;
+    spacing: 3px;
+    padding: 2px;
+}
+
+QLineEdit {
+    border: 1px solid #7F7F7F;
+    padding: 2px 4px;
+    background-color: white;
+    selection-background-color: #0078D7;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078D7;
+}
+
+QPushButton {
+    background-color: #E1E1E1;
+    border: 1px solid #7F7F7F;
+    padding: 4px 12px;
+    min-width: 60px;
+}
+
+QPushButton:hover {
+    background-color: #D0D0D0;
+}
+
+QPushButton:pressed {
+    background-color: #C0C0C0;
+}
+
+QTableWidget {
+    border: 1px solid #7F7F7F;
+    gridline-color: #D0D0D0;
+    background-color: white;
+    selection-background-color: #0078D7;
+    selection-color: white;
+}
+
+QTableWidget::item {
+    padding: 2px;
+}
+
+QHeaderView::section {
+    background-color: #E8E8E8;
+    padding: 4px;
+    border: 1px solid #A0A0A0;
+    font-weight: bold;
+}
+
+QStatusBar {
+    background-color: #F0F0F0;
+    border-top: 1px solid #A0A0A0;
+}
+
+QLabel {
+    color: #000000;
+}
+
+QGroupBox {
+    border: 1px solid #A0A0A0;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+}
