@@ -10,6 +10,7 @@ from pathlib import Path
 from database import Database
 from screens.po_create import POCreateScreen
 from screens.master_data import MaterialMasterScreen
+from screens.hcm_master import EmployeeMasterScreen
 
 class SAPSimulator(QMainWindow):
     def __init__(self):
@@ -144,6 +145,10 @@ class SAPSimulator(QMainWindow):
             self.stack.setCurrentWidget(screen)
         elif tcode == 'MM01':
             screen = MaterialMasterScreen(self.db)
+            self.stack.addWidget(screen)
+            self.stack.setCurrentWidget(screen)
+        elif tcode == 'PA30':
+            screen = EmployeeMasterScreen(self.db)
             self.stack.addWidget(screen)
             self.stack.setCurrentWidget(screen)
         

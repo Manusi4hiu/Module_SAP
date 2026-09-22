@@ -114,7 +114,7 @@ class Database:
             ('ME21N', 'MM', 'Create Purchase Order', 'po_create', 1),
             ('ME23N', 'MM', 'Display Purchase Order', 'po_display', 0),
             ('MIGO', 'MM', 'Goods Receipt', 'goods_receipt', 0),
-            ('PA30', 'HCM', 'Maintain HR Master Data', 'personnel_master', 0),
+            ('PA30', 'HCM', 'Maintain HR Master Data', 'personnel_master', 1),
             ('PA20', 'HCM', 'Display HR Master Data', 'personnel_display', 0),
             ('FB01', 'FI', 'Post Document', 'fi_posting', 0),
             ('VA01', 'SD', 'Create Sales Order', 'so_create', 0),
