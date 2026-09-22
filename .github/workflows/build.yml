@@ -25,6 +25,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pyinstaller PyQt5 openpyxl
+      - run: python excel_parser.py
       - run: pyinstaller build_linux.spec
       - run: chmod +x dist/SAP_Simulator
       - uses: actions/upload-artifact@v4
